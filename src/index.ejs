@@ -2,9 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title><%= title %></title>
+    <title><%= typeof title !== 'undefined' ? title : 'Universal React' %></title>
+    <%= typeof headHtmlSnippet !== 'undefined' ? headHtmlSnippet : null %>
   </head>
   <body>
-    <div id="app"><%= content %></div>
+    <div id="app"><%= typeof content !== 'undefined' ? content : null %></div>
+    <%= typeof bodyHtmlSnippet !== 'undefined' ? bodyHtmlSnippet : null %>
   </body>
 </html>

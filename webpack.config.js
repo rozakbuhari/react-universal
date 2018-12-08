@@ -30,11 +30,7 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin(['public']),
 		(!isProd) && new HtmlWebpackPlugin({
-			template: 'src/index.ejs',
-			templateParameters: {
-				title: 'Universal React',
-				content: ''
-			}
+			template: 'src/index.ejs'
 		}),
 		new Dotenv()
 	].filter(Boolean),
