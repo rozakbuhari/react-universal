@@ -1,0 +1,53 @@
+{
+  "name": "react-universal",
+  "version": "0.1.0",
+  "description": "A universal application boilerplate",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node ./build/server.js",
+    "start:dev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline --progress",
+    "build": "cross-env NODE_ENV=production npm-run-all build:*",
+    "build:client": "webpack --progress --color",
+    "build:server": "webpack --progress --color --config ./webpack.config.server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rozakbuhari/react-universal.git"
+  },
+  "keywords": [
+    "react",
+    "universal",
+    "isomorphic",
+    "ssr",
+    "boilerplate"
+  ],
+  "author": "Fathurozak Buhari <rozakbuhari@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rozakbuhari/react-universal/issues"
+  },
+  "homepage": "https://github.com/rozakbuhari/react-universal#readme",
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "dotenv-webpack": "^1.5.7",
+    "ejs-loader": "^0.3.1",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.7",
+    "npm-run-all": "^4.1.5",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
